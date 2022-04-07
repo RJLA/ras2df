@@ -1,5 +1,5 @@
 # ras2df
-A straightforward library for converting raster data to clean pandas data frame. The output dataframe is null data-free, making it ideal for doing column-wise computations and machine learning problems. Additionally, this also converts back the updated data frame to a raster.
+A straightforward library for converting raster data to clean pandas data frame. The output dataframe is null data-free, making it ideal for doing column-wise computations and machine learning problems. Additionally, this also converts the updated data frame back to a raster.
 
 ## Installation
 ```cmd
