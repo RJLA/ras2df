@@ -29,9 +29,9 @@ df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
 
 #Converts NDVI column to raster
 rd.df_to_raster(
-     df['NDVI'], #column_to_rasterize
-     'NDVI', #output_filename
-     float, #data_type (float or int)
+     df['NDVI'], #column to rasterize
+     'NDVI', #output filename
+     float, #data type (float or int)
 )
 ```
 ## NDVI output
