@@ -37,3 +37,4 @@ rd.df_to_raster(
 ## NDVI output
 The NDVI in png and tiff format will be stored inside
 path_to_file\output_ras2df
+NDVI.png
