@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ras2df
+Version: 0.0.1
+Summary: Converts raster data into pandas dataframe
+Home-page: https://github.com/RJLA/ras2df.git
+Author: Reginald Argamosa
+Author-email: regi.argamosa@gmail.com
+License: UNKNOWN
+Description: ##Usage
+        '''python
+        from ras2df import Raster_to_dataframe
+        
+        ##Call class
+        rd = Raster_to_dataframe(path_to_file,raster_name, raster_file_type)
+        
+        
+        #Convert raster to dataframe
+        df = rd.make_df()
+        
+        #Convert dataframe to raster
+        
+        rd.df_to_raster(column_to_rasterize,output_filename,data_type)
+        note that the 3rd arguement:
+        data type: float or int
+        '''
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
