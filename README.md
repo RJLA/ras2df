@@ -48,7 +48,7 @@ rd.df_to_raster(
 )
 
 #Converts NDBI column to raster
-#The output (PNG and TIFF) of the df_to_raster function will be
+#The output (PNG and TIFF) of this function will be
 #stored inside path_to_file\output_ras2df
 rd.df_to_raster(
      df['NDBI'], #column to rasterize
