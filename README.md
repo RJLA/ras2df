@@ -59,10 +59,10 @@ rd.df_to_raster(
 ## Output raster
 PNG and tiff format will be stored inside
 path_to_file\output_ras2df
-![RGB](https://user-images.githubusercontent.com/18103736/162382181-57e3b2b2-ac72-48df-87c3-b90493bd6a35.png)
-![NDVI](https://user-images.githubusercontent.com/18103736/162381758-4c31d547-9994-4e08-b8da-b7b924c072a2.png)
-![DBSI](https://user-images.githubusercontent.com/18103736/162377371-d5e76174-1709-463b-911e-f4bdcfdea9b2.png)
-![NDBI](https://user-images.githubusercontent.com/18103736/162377422-e3c9493f-8dcb-4f93-8691-5e78b2799930.png)
+
+![NDVI](https://user-images.githubusercontent.com/18103736/162382840-e41205e8-364e-4912-8ce1-12f8ea0bb45d.png)
+![DBSI](https://user-images.githubusercontent.com/18103736/162382887-0560ee4d-cd53-407c-85c2-f9eceb308b66.png)
+![NDBI](https://user-images.githubusercontent.com/18103736/162382907-f2055c47-91ef-4a96-844e-dedc0c190e92.png)
 
 ## Features
 
@@ -95,7 +95,3 @@ MODIS, and high resolution multi-spectral data), RADAR (Sentinel 1 and ALOS 2 â€
 ## ðŸ”— Links
 - [Linkedin](https://www.linkedin.com/in/rjla/)
 - [ResearchGate](https://www.researchgate.net/profile/Reginald-Argamosa)
-
-
-
-
