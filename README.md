@@ -24,10 +24,10 @@ df = rd.make_df()
 #rename columns
 df.columns = ['BLUE','GREEN','RED','NIR','SWIR1','SWIR2']
 
-#compute for ndvi to highlight vegetation
+#compute for ndvi to highlight vegetation areas
 df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
 
-#compute for dbsi to highlight bare soil
+#compute for dbsi to highlight bare soil areas
 df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
 
 #compute for ndbi to highlight builtup areas
@@ -64,8 +64,13 @@ path_to_file\output_ras2df
 ![DBSI](https://user-images.githubusercontent.com/18103736/162377371-d5e76174-1709-463b-911e-f4bdcfdea9b2.png)
 ![NDBI](https://user-images.githubusercontent.com/18103736/162377422-e3c9493f-8dcb-4f93-8691-5e78b2799930.png)
 
+# Hi, I'm Reginald (Regi for short)! 👋
+## 🚀 About Me
+I'm a machine learning researcher that specializes on datasets from remote sensing. I was part in a number of government-funded research initiatives carried out by the University of the Philippines' Training Center for Applied Geodesy and Photogrammetry in Diliman. I am excited about using machine learning to remote sensing datasets in order to aid enhance environmental monitoring.
 
-
+## 🔗 Links
+https://www.linkedin.com/in/rjla/
+https://www.researchgate.net/profile/Reginald-Argamosa
 
 
 
