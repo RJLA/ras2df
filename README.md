@@ -81,14 +81,14 @@ rd.df_to_raster(
 I'm a machine learning researcher that specializes on datasets from remote sensing. I was part in a number of government-funded research initiatives carried out by the University of the Philippines' Training Center for Applied Geodesy and Photogrammetry. I am excited about using machine learning to remote sensing datasets in order to aid enhance environmental monitoring.
 
 ## 🛠 Skills
--Algorithms: MLR, Random Forest, XGBoost, CatBoost, LightGBM, Lasso, Ridge, Elastic Net, Logistic regression, 
+- Algorithms: MLR, Random Forest, XGBoost, CatBoost, LightGBM, Lasso, Ridge, Elastic Net, Logistic regression, 
 K-Means, Agglomerative Clustering, SVM, PCA, ANN, SHAP
 
--Technologies: Scikit-learn, Pandas, Keras, NumPy, Scipy,
+- Technologies: Scikit-learn, Pandas, Keras, NumPy, Scipy,
 Matplotlib, Seaborn, GDAL, OGR, ArcPy, ArcGIS, LAStools,
 SNAP, Google Earth Engine, Jupyter
 
--Data: LiDAR point cloud, Optical (Landsat, Sentinel 2,
+- Data: LiDAR point cloud, Optical (Landsat, Sentinel 2,
 MODIS, and high resolution multi-spectral data), RADAR (Sentinel 1 and ALOS 2 – PALSAR) 
 
 
