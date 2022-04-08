@@ -60,6 +60,8 @@ rd.df_to_raster(
 PNG and tiff format will be stored inside
 path_to_file\output_ras2df
 
+
+![image](https://user-images.githubusercontent.com/18103736/162382989-e88d70ba-8cf4-423d-a7d6-7dd50704b726.png)
 ![NDVI](https://user-images.githubusercontent.com/18103736/162382840-e41205e8-364e-4912-8ce1-12f8ea0bb45d.png)
 ![DBSI](https://user-images.githubusercontent.com/18103736/162382887-0560ee4d-cd53-407c-85c2-f9eceb308b66.png)
 ![NDBI](https://user-images.githubusercontent.com/18103736/162382907-f2055c47-91ef-4a96-844e-dedc0c190e92.png)
