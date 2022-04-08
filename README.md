@@ -69,8 +69,8 @@ path_to_file\output_ras2df
 I'm a machine learning researcher that specializes on datasets from remote sensing. I was part in a number of government-funded research initiatives carried out by the University of the Philippines' Training Center for Applied Geodesy and Photogrammetry in Diliman. I am excited about using machine learning to remote sensing datasets in order to aid enhance environmental monitoring.
 
 ## 🔗 Links
-https://www.linkedin.com/in/rjla/
-https://www.researchgate.net/profile/Reginald-Argamosa
+(https://www.linkedin.com/in/rjla/)
+(https://www.researchgate.net/profile/Reginald-Argamosa)
 
 
 
