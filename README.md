@@ -24,8 +24,14 @@ df = rd.make_df()
 #rename columns
 df.columns = ['BLUE','GREEN','RED','NIR','SWIR1','SWIR2']
 
-#compute for ndvi
+#compute for ndvi to highlight vegetation
 df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
+
+#compute for dbsi to highlight bare soil
+df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
+
+#compute for ndbi to highlight builtup areas
+df['NDBI'] = (df['SWIR1'] - df['NIR'])/(df['SWIR1'] + df['NIR'])
 
 #Converts NDVI column to raster
 rd.df_to_raster(
@@ -33,8 +39,34 @@ rd.df_to_raster(
      'NDVI', #output filename
      float, #data type (float or int)
 )
+
+#Converts DBSI column to raster
+rd.df_to_raster(
+     df['DBSI'], #column to rasterize
+     'DBSI', #output filename
+     float, #data type (float or int)
+)
+
+#Converts NDBI column to raster
+rd.df_to_raster(
+     df['NDBI'], #column to rasterize
+     'NDBI', #output filename
+     float, #data type (float or int)
+)
+
+
 ```
-## NDVI output
-The NDVI in png and tiff format will be stored inside
+## Output raster
+PNG and tiff format will be stored inside
 path_to_file\output_ras2df
-![alt text](https://github.com/RJLA/ras2df/blob/main/NDVI.png)
+
+![NDVI](https://user-images.githubusercontent.com/18103736/162377341-432bb03e-254c-47de-a34b-f03b2a6e426d.png)
+![DBSI](https://user-images.githubusercontent.com/18103736/162377371-d5e76174-1709-463b-911e-f4bdcfdea9b2.png)
+![NDBI](https://user-images.githubusercontent.com/18103736/162377422-e3c9493f-8dcb-4f93-8691-5e78b2799930.png)
+
+
+
+
+
+
+
