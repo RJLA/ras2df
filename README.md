@@ -57,8 +57,8 @@ rd.df_to_raster(
 
 ```
 ## Output raster
-PNG and tiff format will be stored inside
-path_to_file\output_ras2df
+The output (PNG and TIFF) of the df_to_raster function will be
+stored inside path_to_file\output_ras2df
 
 
 ![image](https://user-images.githubusercontent.com/18103736/162382989-e88d70ba-8cf4-423d-a7d6-7dd50704b726.png)
