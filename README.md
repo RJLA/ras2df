@@ -59,7 +59,7 @@ rd.df_to_raster(
 ## Output raster
 PNG and tiff format will be stored inside
 path_to_file\output_ras2df
-![NDVI](https://user-images.githubusercontent.com/18103736/162377341-432bb03e-254c-47de-a34b-f03b2a6e426d.png)
+![NDVI](https://user-images.githubusercontent.com/18103736/162381758-4c31d547-9994-4e08-b8da-b7b924c072a2.png)
 ![DBSI](https://user-images.githubusercontent.com/18103736/162377371-d5e76174-1709-463b-911e-f4bdcfdea9b2.png)
 ![NDBI](https://user-images.githubusercontent.com/18103736/162377422-e3c9493f-8dcb-4f93-8691-5e78b2799930.png)
 
@@ -93,7 +93,6 @@ MODIS, and high resolution multi-spectral data), RADAR (Sentinel 1 and ALOS 2 â€
 
 ## ðŸ”— Links
 [Linkedin](https://www.linkedin.com/in/rjla/)
-
 [ResearchGate](https://www.researchgate.net/profile/Reginald-Argamosa)
 
 
