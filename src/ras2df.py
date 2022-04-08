@@ -218,7 +218,9 @@ class Raster_to_dataframe():
             plt.savefig(os.path.join(self.raster_output_path,
                                     f'{output_filename}.png'),
                         dpi = 300,
-                        edgecolor = 'none')
+                        edgecolor = 'none',
+                        bbox_inches='tight',
+                        )
                    
             
         #if method is regression    
@@ -257,9 +259,11 @@ class Raster_to_dataframe():
                           fontsize = 20)
                 plt.axis('off')   
                 plt.savefig(os.path.join(self.raster_output_path,
-                                        f'{output_filename}.png'),
+                                        f'{output_filename}.png',),
                             dpi = 300,
-                            edgecolor = 'none')
+                            edgecolor = 'none',
+                            bbox_inches='tight',
+                            )
                 
                  
                 del self.df_to_use['prediction_eq']
