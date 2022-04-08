@@ -92,8 +92,8 @@ MODIS, and high resolution multi-spectral data), RADAR (Sentinel 1 and ALOS 2 â€
 
 
 ## ðŸ”— Links
--[Linkedin](https://www.linkedin.com/in/rjla/)
--[ResearchGate](https://www.researchgate.net/profile/Reginald-Argamosa)
+- [Linkedin](https://www.linkedin.com/in/rjla/)
+- [ResearchGate](https://www.researchgate.net/profile/Reginald-Argamosa)
 
 
 
