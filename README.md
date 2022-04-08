@@ -72,7 +72,7 @@ path_to_file\output_ras2df
 - Converts pandas data frame to raster
 ## License
 [MIT](https://github.com/RJLA/ras2df/files/8449316/LICENSE.txt)
-## Authors
+## Author
 - [@RJLA](https://github.com/RJLA)
 - regi.argamosa@gmail.com
 
