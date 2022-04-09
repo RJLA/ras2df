@@ -21,21 +21,24 @@ rd = Raster_to_dataframe(
 #Converts raster to dataframe 
 df = rd.make_df()
 ```
-![image](https://user-images.githubusercontent.com/18103736/162557173-7d738dae-6d5a-4ba5-bfa6-69f1774b1487.png)
+![image](https://user-images.githubusercontent.com/18103736/162557283-fc16cf76-0465-4a05-b82f-8c7949673841.png)
+
 
 ```python
 #rename columns
 df.columns = ['BLUE','GREEN','RED','NIR','SWIR1','SWIR2']
+print(df)
+```
+![image](https://user-images.githubusercontent.com/18103736/162557315-374e404c-8b63-4253-86bf-f38e038b5a60.png)
 
+```python
 #compute for ndvi to highlight vegetation areas
 df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
+print(df) # the NDVI column was created
+```
+![image](https://user-images.githubusercontent.com/18103736/162557391-a7eaf766-53d2-42ab-8d75-510b621da935.png)
 
-#compute for dbsi to highlight bare soil areas
-df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
-
-#compute for ndbi to highlight builtup areas
-df['NDBI'] = (df['SWIR1'] - df['NIR'])/(df['SWIR1'] + df['NIR'])
-
+```python
 #Converts NDVI column to raster
 #The output (PNG and TIFF) of this function will be
 #stored inside path_to_file\output_ras2df
@@ -44,6 +47,15 @@ rd.df_to_raster(
      'NDVI', #output filename
      float, #data type (float or int)
 )
+```
+![image](https://user-images.githubusercontent.com/18103736/162557437-c5b57202-342a-40ea-b5fe-06af2c057c0f.png)
+
+```python
+#compute for dbsi to highlight bare soil areas
+df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
+
+#compute for ndbi to highlight builtup areas
+df['NDBI'] = (df['SWIR1'] - df['NIR'])/(df['SWIR1'] + df['NIR'])
 
 #Converts DBSI column to raster
 rd.df_to_raster(
