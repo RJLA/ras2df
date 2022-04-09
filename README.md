@@ -34,6 +34,8 @@ df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
 df['NDBI'] = (df['SWIR1'] - df['NIR'])/(df['SWIR1'] + df['NIR'])
 
 #Converts NDVI column to raster
+#The output (PNG and TIFF) of this function will be
+#stored inside path_to_file\output_ras2df
 rd.df_to_raster(
      df['NDVI'], #column to rasterize
      'NDVI', #output filename
@@ -48,8 +50,6 @@ rd.df_to_raster(
 )
 
 #Converts NDBI column to raster
-#The output (PNG and TIFF) of this function will be
-#stored inside path_to_file\output_ras2df
 rd.df_to_raster(
      df['NDBI'], #column to rasterize
      'NDBI', #output filename
