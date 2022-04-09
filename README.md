@@ -56,7 +56,20 @@ rd.df_to_raster(
      float, #data type (float or int)
 )
 
+#Do classification problem like kmeans
+from sklearn.cluster import KMeans
 
+kmeans = KMeans(3)
+kmeans.fit(df)
+identified_clusters = kmeans.fit_predict(df)
+df['Clusters'] = identified_clusters
+
+#Converts Clusters column to raster
+rd.df_to_raster(
+     df['Clusters'], #column to rasterize
+     'Clusters', #output filename
+     int, #data type (float or int)
+)
 ```
 ## Output
 RGB
@@ -64,6 +77,9 @@ RGB
 ![NDVI](https://user-images.githubusercontent.com/18103736/162382840-e41205e8-364e-4912-8ce1-12f8ea0bb45d.png)
 ![DBSI](https://user-images.githubusercontent.com/18103736/162382887-0560ee4d-cd53-407c-85c2-f9eceb308b66.png)
 ![NDBI](https://user-images.githubusercontent.com/18103736/162382907-f2055c47-91ef-4a96-844e-dedc0c190e92.png)
+![Clusters](https://user-images.githubusercontent.com/18103736/162556069-3b351745-cbb2-4060-b596-39366d3a2110.png)
+
+
 
 ## Features
 
