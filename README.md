@@ -20,7 +20,10 @@ rd = Raster_to_dataframe(
 
 #Converts raster to dataframe 
 df = rd.make_df()
+```
+![image](https://user-images.githubusercontent.com/18103736/162557173-7d738dae-6d5a-4ba5-bfa6-69f1774b1487.png)
 
+```python
 #rename columns
 df.columns = ['BLUE','GREEN','RED','NIR','SWIR1','SWIR2']
 
