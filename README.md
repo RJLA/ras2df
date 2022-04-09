@@ -59,7 +59,7 @@ rd.df_to_raster(
 #Do classification problem like kmeans
 from sklearn.cluster import KMeans
 
-kmeans = KMeans(3)
+kmeans = KMeans(3) # 3 classes
 kmeans.fit(df)
 identified_clusters = kmeans.fit_predict(df)
 df['Clusters'] = identified_clusters
