@@ -9,7 +9,7 @@ python setup.py install
 
 ## Usage
 In this example we will use the included l8_data.tif as sample data
-RGB
+- RGB
 ![image](https://user-images.githubusercontent.com/18103736/162382989-e88d70ba-8cf4-423d-a7d6-7dd50704b726.png)
 
 ```python
@@ -53,6 +53,7 @@ rd.df_to_raster(
 )
 ```
 ![image](https://user-images.githubusercontent.com/18103736/162557437-c5b57202-342a-40ea-b5fe-06af2c057c0f.png)
+![NDVI](https://user-images.githubusercontent.com/18103736/162382840-e41205e8-364e-4912-8ce1-12f8ea0bb45d.png)
 
 ```python
 #compute for dbsi to highlight bare soil areas
@@ -60,8 +61,6 @@ df['DBSI'] = (df['SWIR1'] - df['GREEN'])/(df['SWIR1'] + df['GREEN'])
 
 #compute for ndbi to highlight builtup areas
 df['NDBI'] = (df['SWIR1'] - df['NIR'])/(df['SWIR1'] + df['NIR'])
-![NDVI](https://user-images.githubusercontent.com/18103736/162382840-e41205e8-364e-4912-8ce1-12f8ea0bb45d.png)
-
 
 #Converts DBSI column to raster
 rd.df_to_raster(
@@ -76,7 +75,11 @@ rd.df_to_raster(
      'NDBI', #output filename
      float, #data type (float or int)
 )
+```
+![DBSI](https://user-images.githubusercontent.com/18103736/162382887-0560ee4d-cd53-407c-85c2-f9eceb308b66.png)
+![NDBI](https://user-images.githubusercontent.com/18103736/162382907-f2055c47-91ef-4a96-844e-dedc0c190e92.png)
 
+```python
 #Do classification problem like kmeans
 from sklearn.cluster import KMeans
 
@@ -92,10 +95,6 @@ rd.df_to_raster(
      int, #data type (float or int)
 )
 ```
-## Output
-
-![DBSI](https://user-images.githubusercontent.com/18103736/162382887-0560ee4d-cd53-407c-85c2-f9eceb308b66.png)
-![NDBI](https://user-images.githubusercontent.com/18103736/162382907-f2055c47-91ef-4a96-844e-dedc0c190e92.png)
 ![Clusters](https://user-images.githubusercontent.com/18103736/162556069-3b351745-cbb2-4060-b596-39366d3a2110.png)
 
 
