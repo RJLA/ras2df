@@ -24,6 +24,7 @@ rd = Raster_to_dataframe(
 
 #Converts raster to dataframe 
 df = rd.make_df()
+print(df)
 ```
 ![image](https://user-images.githubusercontent.com/18103736/162557283-fc16cf76-0465-4a05-b82f-8c7949673841.png)
 
