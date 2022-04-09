@@ -298,7 +298,7 @@ class Raster_to_dataframe():
             output_raster.ComputeStatistics(0)                         
           
         print()
-        print(f'Output raster save at {self.raster_output_path_name}')
+        print(f'Output raster saved at {self.raster_output_path_name}')
           
         new_source.FlushCache()
         output_raster.FlushCache()      
