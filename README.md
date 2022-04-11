@@ -38,6 +38,7 @@ print(df)
 
 ```python
 #compute for ndvi to highlight vegetation areas
+#using the pandas way
 df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
 print(df) # the NDVI column was created
 ```
