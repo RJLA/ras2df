@@ -3,7 +3,7 @@ A simple library for converting raster data to clean pandas data frame. The outp
 
 ## Installation
 ```cmd
-cd ras2df
+cd \ras2df
 python setup.py install
 ```
 
