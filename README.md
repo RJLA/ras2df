@@ -17,9 +17,9 @@ from ras2df import Raster_to_dataframe
 
 #Call class 
 rd = Raster_to_dataframe(
-     path_to_file, #path to raster data
-     raster_name, #raster file name
-     raster_file_type, #raster extention (tif, img, etc.)
+     r'path\to\file', #path to raster data
+     'l8_data', #raster file name
+     'tif', #raster extention (tif, img, etc.)
 )
 
 #Converts raster to dataframe 
