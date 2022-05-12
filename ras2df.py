@@ -3,6 +3,7 @@ import numpy as np
 from osgeo import gdal
 from osgeo.gdalconst import *
 import os
+from numpy import inf
 import matplotlib.pyplot as plt
 from skimage import exposure
 from datetime import datetime
@@ -89,20 +90,16 @@ class Raster_to_dataframe():
         def make_flat_array(band_number):
 
             band = self.data_source.GetRasterBand(band_number)
-            no_data = band.GetNoDataValue()
+            self.no_data = band.GetNoDataValue()
             array = band.ReadAsArray(
                 0, 
                 0, 
                 self.n_cols, 
                 self.n_rows
                 )  #transform band as array
-
-            array = np.where(
-                array == no_data,
-                np.nan,
-                array,
-                ) #change no data values to nan
-      
+     
+            array[array == self.no_data] = np.nan
+            
             if round_values is True:
                 array = np.round(array, 4) #round to 4 decimals places
             elif round_values is False:
@@ -121,7 +118,7 @@ class Raster_to_dataframe():
             array_tupple = array_tupple + (make_flat_array(i + 1), ) #append to empty tuple
 
         array_final = np.vstack(array_tupple).T #stack array vertically 
-        
+
         del array_tupple
         
         #create main data frame
@@ -164,10 +161,6 @@ class Raster_to_dataframe():
         df_as_array = np.array(self.main_df['prediction']) #make df as array
         df_as_array = df_as_array.reshape(self.n_cols, 
                                       self.n_rows).T #reshape
-        
-        #get time for filename purposes
-        date_time_1 = str(datetime.now()) 
-
        
         self.raster_output_path_name = os.path.join(
             self.raster_output_path,
@@ -197,32 +190,27 @@ class Raster_to_dataframe():
         #if method is classification
         if analysis_type == int:
             
-            new_source = create_new_source(gdal.GDT_Byte)
+            new_source = create_new_source(GDT_Float32)
             output_raster = new_source.GetRasterBand(1)
 
             #transform df to array
-            output_raster.WriteArray(df_as_array + 1, 
+            output_raster.WriteArray(df_as_array, 
                                  0, 
                                  0)
+            output_raster.SetNoDataValue(-9999)
             output_raster.ComputeStatistics(0)
             
             #visualize
             fig, ax = plt.subplots()
-            num_colors = self.max_value + 1
+            num_colors = self.max_value
             cmap = plt.cm.get_cmap(
                 'Set1', 
                 num_colors,
                 )
-            plt.imshow(df_as_array + 1, cmap=cmap)            
+            cax = ax.imshow(df_as_array, cmap=cmap)   
+            cbar = fig.colorbar(cax)
 
-            cbar = plt.colorbar(ticks=np.linspace(
-                1, 
-                num_colors , 
-                num_colors * 2 + 1)[1::2],
-                )
-            cbar.ax.set_yticklabels(
-                range(1, num_colors + 1),
-                )
+
             plt.title(f'{output_filename}', 
                       fontsize = 20)
 
@@ -294,7 +282,8 @@ class Raster_to_dataframe():
                 df_as_array, 
                 0, 
                 0
-                )       
+                )
+            output_raster.SetNoDataValue(-9999)
             output_raster.ComputeStatistics(0)                         
           
         print()
