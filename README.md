@@ -46,6 +46,15 @@ print(df)
 ![image](https://user-images.githubusercontent.com/18103736/162557315-374e404c-8b63-4253-86bf-f38e038b5a60.png)
 
 ```python
+df.plot.scatter(
+    x='GREEN',
+    y='NDVI',
+    c='DarkBlue')
+```
+![image](https://user-images.githubusercontent.com/18103736/168415856-e7b56b99-c93f-486b-a894-f2eafff49337.png)
+
+
+```python
 #compute for ndvi to highlight vegetation areas
 #using the pandas way
 df['NDVI'] = (df['NIR'] - df['RED']) / (df['NIR'] + df['RED'])
