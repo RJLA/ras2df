@@ -3,10 +3,8 @@ import numpy as np
 from osgeo import gdal
 from osgeo.gdalconst import *
 import os
-from numpy import inf
 import matplotlib.pyplot as plt
 from skimage import exposure
-from datetime import datetime
 
 class Raster_to_dataframe():
              
@@ -208,19 +206,20 @@ class Raster_to_dataframe():
                 num_colors,
                 )
             cax = ax.imshow(df_as_array, cmap=cmap)   
-            cbar = fig.colorbar(cax)
+            fig.colorbar(cax)
 
 
             plt.title(f'{output_filename}', 
                       fontsize = 20)
 
             plt.axis('off') 
-            plt.savefig(os.path.join(self.raster_output_path,
-                                    f'{output_filename}.png'),
-                        dpi = 300,
-                        edgecolor = 'none',
-                        bbox_inches='tight',
-                        )
+            plt.show()
+            # plt.savefig(os.path.join(self.raster_output_path,
+            #                         f'{output_filename}.png'),
+            #             dpi = 300,
+            #             edgecolor = 'none',
+            #             bbox_inches='tight',
+            #             )
                    
             
         #if method is regression    
@@ -258,13 +257,8 @@ class Raster_to_dataframe():
                 plt.title(f'{output_filename}', 
                           fontsize = 20)
                 plt.axis('off')   
-                plt.savefig(os.path.join(self.raster_output_path,
-                                        f'{output_filename}.png',),
-                            dpi = 300,
-                            edgecolor = 'none',
-                            bbox_inches='tight',
-                            )
-                
+                plt.show()
+
                  
                 del self.df_to_use['prediction_eq']
                 del img_eq 
