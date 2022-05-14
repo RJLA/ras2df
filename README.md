@@ -46,7 +46,7 @@ print(df)
 ![image](https://user-images.githubusercontent.com/18103736/162557315-374e404c-8b63-4253-86bf-f38e038b5a60.png)
 
 ```python
-#make scatter plot using pandas' scatter method
+#make plot using pandas'scatter plot method
 df.plot.scatter(
     x='GREEN',
     y='NDVI',
