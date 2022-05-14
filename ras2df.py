@@ -214,12 +214,6 @@ class Raster_to_dataframe():
 
             plt.axis('off') 
             plt.show()
-            # plt.savefig(os.path.join(self.raster_output_path,
-            #                         f'{output_filename}.png'),
-            #             dpi = 300,
-            #             edgecolor = 'none',
-            #             bbox_inches='tight',
-            #             )
                    
             
         #if method is regression    
