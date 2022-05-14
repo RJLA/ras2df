@@ -1,11 +1,20 @@
 # ras2df
 A simple library for converting raster data to clean pandas data frame. The output dataframe is null data-free, making it ideal for doing column-wise computations and machine learning problems. Additionally, this also converts the updated data frame back to a raster. This is built on top of Pandas, Numpy, GDAL, and Matplotlib
 
+
+
 ## Installation
 ```cmd
 cd \ras2df
 python setup.py install
 ```
+
+
+```python
+##google colab
+!pip install git+https://github.com/RJLA/ras2df.git
+```
+
 
 ## Usage
 In this example we will use the included l8_data.tif as sample data
